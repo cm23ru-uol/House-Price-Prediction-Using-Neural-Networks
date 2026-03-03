@@ -2,6 +2,8 @@
 
 Will, neural network 1, neural network 2 
 
+Ryan, Data cleaning
+
 Richard,
 
 Kevin,
