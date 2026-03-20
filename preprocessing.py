@@ -57,8 +57,4 @@ def df_feature_constructions(X_train, X_test):
     X_train["population_density"] = X_train["Population"] / X_train["AveOccup"]
     X_test["population_density"] = X_test["Population"] / X_test["AveOccup"]
 
-    # Interaction feature
-    X_train["income_rooms"] = X_train["MedInc"] * X_train["AveRooms"]
-    X_test["income_rooms"] = X_test["MedInc"] * X_test["AveRooms"]
-
     return X_train, X_test
