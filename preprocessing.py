@@ -7,7 +7,8 @@ from sklearn.datasets import fetch_california_housing
 def df_basic_cleaning_and_split(data = fetch_california_housing(as_frame=True).frame,
     target_col="MedHouseVal",
     test_size=0.3,
-    random_state=42):
+    random_state=42, 
+    include_split = True):
     
     df = data.copy() 
 
@@ -19,6 +20,9 @@ def df_basic_cleaning_and_split(data = fetch_california_housing(as_frame=True).f
     y = df[target_col]
 
     # Train test split first (prevents leakage)
+    if include_split == False: 
+        return X
+    
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, 
                                                         random_state=random_state)
     
